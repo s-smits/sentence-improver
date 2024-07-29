@@ -3,7 +3,7 @@
 Dit project implementeert een webapplicatie voor het verbeteren van zinnen met behulp van AI. Het maakt gebruik van FastAPI voor de backend, HTML/CSS/JavaScript voor de frontend, en de Anthropic API voor tekstverbetering.
 
 ## Korte demo
-![Korte demo GIF](https://github.com/s-smits/user-attachments/2e587d04-1cf5-4649-a076-0af091bc57cc)
+![image](https://github.com/user-attachments/assets/2e587d04-1cf5-4649-a076-0af091bc57cc)
 
 ## Installatie
 
