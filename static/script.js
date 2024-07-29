@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize "Reject All" button - initially hidden
     const rejectAllBtn = document.createElement("button");
     rejectAllBtn.className = "reject-all-btn btn btn-warning";
-    rejectAllBtn.textContent = "Reject All";
+    rejectAllBtn.textContent = "Alles Afwijzen";
     rejectAllBtn.style.display = "none"; // Initially hidden
     resultDiv.appendChild(rejectAllBtn);
 
     // Initialize "Copy" button - initially disabled
     const copyBtn = document.createElement("button");
     copyBtn.className = "copy-btn btn btn-primary";
-    copyBtn.textContent = "Copy";
+    copyBtn.textContent = "Kopiëren";
     copyBtn.disabled = true; // Initially disabled
     resultDiv.appendChild(copyBtn);
     
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const rejectAllBtn = document.createElement("button");
         rejectAllBtn.className = "reject-all-btn btn btn-warning";
-        rejectAllBtn.textContent = "Reject All";
+        rejectAllBtn.textContent = "Alles Afwijzen";
         rejectAllBtn.addEventListener("click", () => {
             const improvedSentenceElems = document.querySelectorAll(".improved-sentence");
             const acceptBtns = document.querySelectorAll(".accept-btn");
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Append "Copy" button after "Reject All" button and before appending sentences
         const copyBtn = document.createElement("button");
         copyBtn.className = "copy-btn btn btn-primary";
-        copyBtn.textContent = "Copy";
+        copyBtn.textContent = "Kopiëren";
         copyBtn.disabled = true; // Initially disabled
         copyBtn.addEventListener("click", () => {
             const sentences = Array.from(document.querySelectorAll(".original-sentence")).map(elem => elem.textContent);
@@ -79,9 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Usage:
         try {
-            await updateLoadingMessage("Sending out information...");
+            await updateLoadingMessage("Informatie verzenden...");
         } catch (error) {
-            console.error("Error updating loading message:", error);
+            console.error("Fout bij het bijwerken van het laadberichtje:", error);
         }
 
         const useCaseCheckboxes = document.querySelectorAll('input[name="use_case"]:checked');
@@ -97,22 +97,22 @@ document.addEventListener("DOMContentLoaded", () => {
             }),
             new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), 30000)) // Timeout after 30 seconds
         ]).catch(async (err) => {
-            await updateLoadingMessage("Error: " + err.message);
+            await updateLoadingMessage("Fout: " + err.message);
             throw err;
         });
 
         try {
-            updateLoadingMessage("Writing the improvements...");
+            updateLoadingMessage("Verbeteringen schrijven...");
         } catch (error) {
-            console.error("Error updating loading message:", error);
+            console.error("Fout bij het bijwerken van het laadberichtje:", error);
         }
 
         const { originalSentences: originalSentencesFromResponse, improvedSentences } = await response.json().catch(error => console.error("Error parsing JSON:", error));
 
         try {
-            updateLoadingMessage("Setting up improvement sentences...");
+            updateLoadingMessage("Verbeterde zinnen instellen...");
         } catch (error) {
-            console.error("Error updating loading message:", error);
+            console.error("Fout bij het bijwerken van het laadberichtje:", error);
         }
 
         loadingMessages.style.display = "none"; // Hide the loading messages div after loading
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const acceptBtn = document.createElement("button");
                 acceptBtn.className = "accept-btn btn btn-success";
-                acceptBtn.textContent = "Accept";
+                acceptBtn.textContent = "Accepteren";
                 acceptBtn.addEventListener("click", () => {
                     sentenceElem.textContent = improvedSentence;
                     sentenceElem.style.fontWeight = "normal";
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const rejectBtn = document.createElement("button");
                 rejectBtn.className = "reject-btn btn btn-danger";
-                rejectBtn.textContent = "Reject";
+                rejectBtn.textContent = "Afwijzen";
                 rejectBtn.addEventListener("click", () => {
                     sentenceElem.style.fontWeight = "normal";
                     sentenceElem.style.fontStyle = "normal";

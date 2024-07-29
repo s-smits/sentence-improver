@@ -11,37 +11,37 @@
         <h1 class="text-center mb-4">Sentence Improver</h1>
         <form id="sentenceForm">
             <div class="mb-3">
-                <textarea id="textInput" rows="10" class="form-control" placeholder="Enter your text here"></textarea>
+                <textarea id="textInput" rows="10" class="form-control" placeholder="Voer hier uw tekst in"></textarea>
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary">Improve Sentences</button>
+                <button type="submit" class="btn btn-primary">Verbeter zinnen</button>
             </div>
             <div class="mb-3">
-                <label for="slider" class="form-label">Percentage of sentences to improve:</label>
+                <label for="slider" class="form-label">Percentage zinnen om te verbeteren:</label>
                 <input type="range" class="form-range" id="slider" name="slider" min="0" max="100" step="10" value="50">
                 <span id="sliderValue">50%</span>
             </div>
             <div class="mb-3">
-                <label class="form-label">Select use cases:</label>
+                <label class="form-label">Selecteer gebruiksdoelen:</label>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="grammar_logic" name="use_case" value="grammar_logic">
-                    <label class="form-check-label" for="grammar_logic">Grammar and Logic</label>
+                    <label class="form-check-label" for="grammar_logic">Grammatica en logica</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="knowledge_gaps" name="use_case" value="knowledge_gaps">
-                    <label class="form-check-label" for="knowledge_gaps">Knowledge Gaps</label>
+                    <label class="form-check-label" for="knowledge_gaps">Missende kennis</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="clarity_concision" name="use_case" value="clarity_concision">
-                    <label class="form-check-label" for="clarity_concision">Clarity and Concision</label>
+                    <label class="form-check-label" for="clarity_concision">Helderheid en beknoptheid</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="tone_style" name="use_case" value="tone_style">
-                    <label class="form-check-label" for="tone_style">Tone and Style</label>
+                    <label class="form-check-label" for="tone_style">Toon en stijl</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="persuasiveness" name="use_case" value="persuasiveness">
-                    <label class="form-check-label" for="persuasiveness">Persuasiveness</label>
+                    <label class="form-check-label" for="persuasiveness">Overtuigingskracht</label>
                 </div>
             </div>
             <div id="loadingMessages" class="mt-3" style="display: none;"></div>

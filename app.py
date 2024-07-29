@@ -30,17 +30,17 @@ async def improve_sentences(request: Request):
     amount_of_sentences = math.ceil(total_sentences * (slider / 100))
 
     use_case_mapping = {
-        "grammar_logic": "grammar and logic",
-        "knowledge_gaps": "knowledge gaps", 
-        "clarity_concision": "clarity and concision",
-        "tone_style": "tone and style",
-        "persuasiveness": "persuasiveness"
+        "grammar_logic": "grammatica en logica",
+        "knowledge_gaps": "kennishiaten", 
+        "clarity_concision": "helderheid en beknoptheid",
+        "tone_style": "toon en stijl",
+        "persuasiveness": "overtuigingskracht"
     }
 
     selected_use_cases = [use_case_mapping[use_case] for use_case in use_cases if use_case in use_case_mapping]
-    use_case_str = " and ".join(selected_use_cases) if selected_use_cases else "text"
+    use_case_str = " en ".join(selected_use_cases) if selected_use_cases else "tekst"
     
-    prompt = f'''You are an amazing text editor. There are {total_sentences} sentences in the following text. Analyze {use_case_str} thoroughly and choose {amount_of_sentences} sentences to improve. Make sure the sentences are in the same writing style as the original text. For the replaced sentences, only output the {amount_of_sentences} replaced sentences in JSON format with exactly the same values as the original sentences. Text to improve: {split_sentences_json}
+    prompt = f'''Je bent een geweldige tekstredacteur. Er zijn {total_sentences} zinnen in de volgende tekst. Analyseer {use_case_str} grondig en kies {amount_of_sentences} zinnen om te verbeteren. Zorg ervoor dat de zinnen in dezelfde schrijfstijl zijn als de originele tekst. Geef voor de vervangen zinnen alleen de {amount_of_sentences} vervangen zinnen uit in JSON-formaat met exact dezelfde waarden als de originele zinnen. Tekst om te verbeteren: {split_sentences_json}
     '''
     print(prompt)
     client = anthropic.Anthropic(
