@@ -10,7 +10,12 @@ Dit project implementeert een webapplicatie voor het verbeteren van zinnen met b
    cd sentence-improver
    ```
 
-2. Maak een virtuele omgeving aan met de naam `venv_sentence_improver` en activeer deze:
+2. Navigeer naar de `src` map:
+   ```
+   cd src
+   ```
+
+3. Maak een virtuele omgeving aan met de naam `venv_sentence_improver` en activeer deze:
    - Voor macOS en Linux:
      ```
      python3 -m venv venv_sentence_improver
@@ -22,12 +27,12 @@ Dit project implementeert een webapplicatie voor het verbeteren van zinnen met b
      venv_sentence_improver\Scripts\activate
      ```
 
-3. Installeer de vereiste dependencies:
+4. Installeer de vereiste dependencies:
    ```
    pip install -r requirements.txt
    ```
 
-4. Maak een `.env` bestand aan in de hoofdmap van het project en voeg je Anthropic API-sleutel toe:
+5. Maak een `.env` bestand aan in de hoofdmap van het project en voeg je Anthropic API-sleutel toe:
    ```
    ANTHROPIC_API_KEY=jouw_api_sleutel_hier
    ```
