@@ -1,0 +1,4 @@
+anthropic==0.31.2
+fastapi==0.111.1
+nltk==3.8.1
+python-dotenv==1.0.1

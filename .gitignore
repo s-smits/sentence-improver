@@ -1,0 +1,4 @@
+sentence_rewriter_venv
+__pycache__
+.env
+.DS_Store
