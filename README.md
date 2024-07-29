@@ -6,7 +6,7 @@ Dit project implementeert een webapplicatie voor het verbeteren van zinnen met b
 
 1. Clone de repository en navigeer naar de projectmap:
    ```
-   git clone https://github.com/yourusername/sentence-improver
+   git clone https://github.com/s-smits/sentence-improver
    cd sentence-improver
    ```
 
