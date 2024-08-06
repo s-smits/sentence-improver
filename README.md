@@ -13,11 +13,6 @@ Dit project implementeert een webapplicatie voor het verbeteren van zinnen met b
    cd sentence-improver
    ```
 
-2. Navigeer naar de `src` map:
-   ```
-   cd src
-   ```
-
 3. Maak een virtuele omgeving aan met de naam `venv_sentence_improver` en activeer deze:
    - Voor macOS en Linux:
      ```
@@ -62,11 +57,11 @@ Open vervolgens een webbrowser en ga naar `http://localhost:8000` om de Sentence
 
 ## Projectstructuur
 
-- `src/app.py`: FastAPI backend-applicatie
-- `src/templates/index.html`: HTML-template voor de webpagina
-- `src/static/script.js`: JavaScript voor frontend-functionaliteit
-- `src/static/style.css`: CSS-stijlen voor de webpagina
-- `src/sentence_splitter.py`: Hulpfunctie voor het splitsen van zinnen
+- `app.py`: FastAPI backend-applicatie
+- `templates/index.html`: HTML-template voor de webpagina
+- `static/script.js`: JavaScript voor frontend-functionaliteit
+- `static/style.css`: CSS-stijlen voor de webpagina
+- `sentence_splitter.py`: Hulpfunctie voor het splitsen van zinnen
 - `requirements.txt`: Lijst met Python-dependencies
 
 ## Vereisten
