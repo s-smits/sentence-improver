@@ -35,7 +35,7 @@ Dit project implementeert een webapplicatie voor het verbeteren van zinnen met b
    pip install -r requirements.txt
    ```
 
-5. Maak een `.env` bestand aan in de hoofdmap van het project en voeg je Anthropic API-sleutel toe:
+5. Wijzig het `.env.example` naar `.env` in de hoofdmap en voeg je Anthropic API-sleutel toe:
    ```
    ANTHROPIC_API_KEY=jouw_api_sleutel_hier
    ```
