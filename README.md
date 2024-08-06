@@ -46,7 +46,7 @@ Dit project implementeert een webapplicatie voor het verbeteren van zinnen met b
 
 Start de FastAPI-server:
 ```
-uvicorn app:app --reload
+python -m uvicorn app:app --reload uvicorn app:app --reload
 ```
 
 Open vervolgens een webbrowser en ga naar `http://localhost:8000` om de Sentence Improver webapplicatie te gebruiken.
