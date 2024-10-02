@@ -1,73 +1,73 @@
 # Sentence Improver
 
-Dit project implementeert een webapplicatie voor het verbeteren van zinnen met behulp van AI. Het maakt gebruik van FastAPI voor de backend, HTML/CSS/JavaScript voor de frontend, en de Anthropic API voor tekstverbetering.
+This project implements a web application for improving sentences using AI. It utilizes FastAPI for the backend, HTML/CSS/JavaScript for the frontend, and the Anthropic API for text enhancement.
 
-## Korte demo
+## Brief demo
 ![main](https://github.com/user-attachments/assets/8824fc95-830d-44e5-a298-791b66138a50)
 
-## Installatie
+## Installation
 
-1. Clone de repository en navigeer naar de projectmap:
+1. Clone the repository and navigate to the project folder:
    ```
    git clone https://github.com/s-smits/sentence-improver
    cd sentence-improver
    ```
 
-3. Maak een virtuele omgeving aan met de naam `venv_sentence_improver` en activeer deze:
-   - Voor macOS en Linux:
+2. Create a virtual environment named `venv_sentence_improver` and activate it:
+   - For macOS and Linux:
      ```
      python3 -m venv venv_sentence_improver
      source venv_sentence_improver/bin/activate
      ```
-   - Voor Windows:
+   - For Windows:
      ```
      python -m venv venv_sentence_improver
      venv_sentence_improver\Scripts\activate
      ```
 
-4. Installeer de vereiste dependencies:
+3. Install the required dependencies:
    ```
    pip install -r requirements.txt
    ```
 
-5. Wijzig het `.env.example` naar `.env` in de hoofdmap en voeg je Anthropic API-sleutel toe:
+4. Rename `.env.example` to `.env` in the root directory and add your Anthropic API key:
    ```
-   ANTHROPIC_API_KEY=jouw_api_sleutel_hier
+   ANTHROPIC_API_KEY=your_api_key_here
    ```
 
-   Zorg ervoor dat je je eigen Anthropic API-sleutel hier invoert. Deze sleutel is noodzakelijk voor het gebruik van de Anthropic AI-model in dit project.
+   Make sure to enter your own Anthropic API key here. This key is necessary for using the Anthropic AI model in this project.
 
-## Gebruik
+## Usage
 
-Start de FastAPI-server:
+Start the FastAPI server:
 ```
-python -m uvicorn app:app --reload uvicorn app:app --reload
+python -m uvicorn app:app --reload
 ```
 
-Open vervolgens een webbrowser en ga naar `http://localhost:8000` om de Sentence Improver webapplicatie te gebruiken.
+Then open a web browser and go to `http://localhost:8000` to use the Sentence Improver web application.
 
-## Functionaliteiten
+## Features
 
-- Invoer van tekst voor verbetering
-- Selectie van het percentage zinnen om te verbeteren
-- Keuze uit verschillende use cases voor verbetering (grammatica en logica, kennishiaten, helderheid en beknoptheid, toon en stijl, overtuigingskracht)
-- Weergave van originele en verbeterde zinnen
-- Mogelijkheid om verbeteringen te accepteren of te verwerpen
-- Kopiëren van de uiteindelijke tekst
+- Input text for improvement
+- Selection of the percentage of sentences to improve
+- Choice of different use cases for improvement (grammar and logic, knowledge gaps, clarity and conciseness, tone and style, persuasiveness)
+- Display of original and improved sentences
+- Option to accept or reject improvements
+- Copying of the final text
 
-## Projectstructuur
+## Project Structure
 
-- `app.py`: FastAPI backend-applicatie
-- `templates/index.html`: HTML-template voor de webpagina
-- `static/script.js`: JavaScript voor frontend-functionaliteit
-- `static/style.css`: CSS-stijlen voor de webpagina
-- `sentence_splitter.py`: Hulpfunctie voor het splitsen van zinnen
-- `requirements.txt`: Lijst met Python-dependencies
+- `app.py`: FastAPI backend application
+- `templates/index.html`: HTML template for the webpage
+- `static/script.js`: JavaScript for frontend functionality
+- `static/style.css`: CSS styles for the webpage
+- `sentence_splitter.py`: Helper function for splitting sentences
+- `requirements.txt`: List of Python dependencies
 
-## Vereisten
+## Requirements
 
-Zie `requirements.txt` voor een volledige lijst van dependencies.
+See `requirements.txt` for a full list of dependencies.
 
-## Licentie
+## License
 
-[MIT-licentie](LICENSE)
+[MIT License](LICENSE)
